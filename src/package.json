@@ -1,0 +1,17 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thiago R. de Freitas <thiagofreitas_659@hotmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "crypto": "1.0.1",
+    "moment": "2.29.1",
+    "nedb": "1.8.0",
+    "nodemailer": "6.4.14"
+  }
+}

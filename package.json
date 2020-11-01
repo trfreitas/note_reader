@@ -1,0 +1,27 @@
+{
+  "name": "note_reader",
+  "version": "1.0.0",
+  "description": "Leitor de notas fiscais para envio de email",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nw src/",
+    "prod": "nwbuild --platforms win32,win64 --buildDir dist/ src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trfreitas/note_reader.git"
+  },
+  "keywords": [
+    "notes"
+  ],
+  "author": "Thiago R. de Freitas <thiagofreitas_659@hotmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trfreitas/note_reader/issues"
+  },
+  "homepage": "https://github.com/trfreitas/note_reader#readme",
+  "devDependencies": {
+    "nw": "0.49.1-sdk",
+    "nw-builder": "3.5.7"
+  }
+}
