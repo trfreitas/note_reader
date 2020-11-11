@@ -14,8 +14,11 @@ const allFiles = [];
 
 const filePaths = {
   dbNotePath: path.join(nw.App.dataPath, 'notes.db'),
-  dbConfigPath: path.join(nw.App.dataPath, 'config.db')
+  dbConfigPath: path.join(nw.App.dataPath, 'config.db'),
+  logPath: path.join(nw.App.dataPath, 'note_reader.log')
 };
+
+const logger = require('logger').createLogger(filePaths.logPath);
 
 const Datastore = require('nedb');
 const dbNotes = new Datastore({ 
@@ -139,6 +142,8 @@ const sendEmail = async (smtpconfig, to) => {
       });
       if (info.messageId) {
         await updateSyncFile(files[i]._id)
+      } else {
+        logger.info(info);
       }
     }
     return resolve();
